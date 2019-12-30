@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "v19hhassan37",
+      "email": "hussein.hassan@vodafone.com",
+      "phone": "01207077747",
+      "password": "sona123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "mohab.elhamzawy@vodafone.com",
+      "password": "mobs123",
+      "phone": "010258457",
+      "role": "agent",
+      "username": "melhamzawy1"
+    },
+    {
+      "id": 3,
+      "email": "mohamed.badr@vodafone.com",
+      "password": "badr123",
+      "phone": "010258457",
+      "role": "agent",
+      "username": "mbadr1"
+    }
+  ]
+}

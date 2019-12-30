@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+// Import Custom Variables
+@import "scss/variables.scss";
+//// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import Custom SCSS
+@import "scss/mixins";
+@import "scss/global";
+@import "scss/utilities";
+@import "scss/navbar";
+@import "scss/cards";
+@import "scss/login";
+@import "scss/footer";
+// icons svg handling
+.icon-6539adcc {
+  fill: $danger;
+}
+
+.icon-7dfeebb0 {
+  fill: $warning;
+}
