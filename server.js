@@ -121,9 +121,12 @@ server.post('/auth/login', (req, res) => {
         res.status(status).json({status, message});
         return
     }
+    let signedUser = userdb.find(userObj => userObj.username === username);
+    // console.log(userdb.find(element => element.username === username));
+    let role = signedUser.role;
     const access_token = createToken({username, password});
     console.log("Access Token:" + access_token);
-    res.status(200).json({access_token})
+    res.status(200).json({access_token, role, username})
 });
 // add orders
 server.post('/addOrder', (req, res) => {
