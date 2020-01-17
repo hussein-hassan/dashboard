@@ -32,7 +32,7 @@ function isAuthenticated({username, password}) {
 // get all users
 server.get('/getUsers', (req, res) => {
     console.log(res.body);
-    res.json(userdb)
+    res.json(JSON.parse(fs.readFileSync('./users.json', 'UTF-8')))
 
 });
 // get only one user by id
@@ -40,7 +40,8 @@ server.get('/getUser/:id', (req, res) => {
     const userId = parseInt(req.params.id, 10);
     // Number(userId);
     // console.log(typeof (userId));
-    const result = userdb.find(_user => _user.id === userId);
+    const currentUserDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+    const result = currentUserDb.find(_user => _user.id === userId);
     if (result) {
         res.json(result);
     } else {
@@ -50,13 +51,22 @@ server.get('/getUser/:id', (req, res) => {
 });
 // delete one user by ID
 server.delete('/removeUser/:id', (req, res) => {
+     const currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
     const userId = parseInt(req.params.id, 10);
     console.log(`Deleted item with id: ${userId}`);
-    const filtered_users = userdb.filter(user => user.id !== userId);
-
+    const currentUser = currentUsersDb.find(user => user.id === userId);
+    const currentUserIndex = currentUsersDb.findIndex(user => user.id === userId);
+    const filtered_users = currentUsersDb.splice(currentUserIndex, currentUser);
+    console.log(filtered_users);
     fs.writeFile('./users.json', JSON.stringify(filtered_users), err => {
       if (err) throw err;
+      console.log('user deleted')
     });
+    if (result) {
+        res.json(result);
+    } else {
+        res.json(`This id:${userId} not found`)
+    }
     res.json(filtered_users);
 });
 // Register New User
@@ -79,13 +89,10 @@ server.post('/auth/register', (req, res) => {
             res.status(status).json({status, message});
             return
         }
-
         // Get current users data
         var data = JSON.parse(data.toString());
-
         // Get the id of last user
         var last_item_id = data[data.length - 1].id;
-
         //Add new user
         data.push({
             id: last_item_id + 1,
@@ -95,7 +102,7 @@ server.post('/auth/register', (req, res) => {
             role: role,
             username: username
         }); //add some data
-        var writeData = fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {  // WRITE
+         fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {  // WRITE
             if (err) {
                 const status = 401;
                 const message = err;
