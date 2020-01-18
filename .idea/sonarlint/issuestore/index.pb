@@ -25,3 +25,9 @@ $src/app/pages/home/home.component.ts,8/3/8376ca7e849600c4cd3d99284d2eacb0c1145
 users.json,b/9/b9a3cf24e48e943560b97c62600586fba3ad4f68
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+T
+$src/app/pages/add/add.component.html,6/5/6555801b349ad038d5e3820ab63c909c7e594f11
+X
+(src/app/pages/login/login.component.html,1/d/1dcbd6012d665d15468db3a034e9e4626bd8a142
+>
+src/index.html,5/c/5c975582791da6f060261188096d6aad85db6e09
