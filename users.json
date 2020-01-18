@@ -1,9 +1,1 @@
-[
-  {
-    "username":"v19hhassan37",
-    "email":"mohab.elhamzawy@vodafone.com",
-    "phone":"01207077747",
-    "password":"sona123",
-    "role":"admin"
-  }
-]
+[{"id":1,"username":"v19hhassan37","email":"hussein.hassan@vodafone.com","phone":"01207077747","password":"sona123","role":"admin"}]

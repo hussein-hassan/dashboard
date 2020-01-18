@@ -2,7 +2,6 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const jsonServer = require('json-server');
 const jwt = require('jsonwebtoken');
-
 const server = jsonServer.create();
 // const router = jsonServer.router('./orders.json');
 let userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
@@ -33,7 +32,8 @@ function isAuthenticated({username, password}) {
 // get all users
 server.get('/getUsers', (req, res) => {
     console.log(res.body);
-    res.json(JSON.parse(fs.readFileSync('./users.json', 'UTF-8')))
+    let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+    res.json(currentUsersDb)
 
 });
 // get only one user by id
@@ -52,13 +52,13 @@ server.get('/getUser/:id', (req, res) => {
 });
 // delete one user by ID
 server.delete('/removeUser/:id', (req, res) => {
-     const currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+    const currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
     const userId = parseInt(req.params.id, 10);
     console.log(`Deleted item with id: ${userId}`);
     const currentUser = currentUsersDb.find(user => user.id === userId);
     let filtered_users = currentUsersDb.filter(_user => _user !== currentUser);
     fs.writeFile('./users.json', JSON.stringify(filtered_users), err => {
-      if (err) throw err;
+        if (err) throw err;
     });
     if (currentUser) {
         res.json(`User with ID = ${currentUser.id} has been deleted`);
@@ -98,7 +98,7 @@ server.post('/auth/register', (req, res) => {
             role: role,
             username: username
         }); //add some data
-         fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {  // WRITE
+        fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {  // WRITE
             if (err) {
                 const status = 401;
                 const message = err;
@@ -174,7 +174,42 @@ server.post('/addOrder', (req, res) => {
 
     res.status(200).json('Order add successfully ')
 });
+// get all orders
+server.get('/getOrders', (req, res) => {
+    console.log(res.body);
+    res.json(JSON.parse(fs.readFileSync('./orders.json', 'UTF-8')))
+});
+// get only one order by id
+server.get('/getOrder/:id', (req, res) => {
+    const orderId = parseInt(req.params.id, 10);
+    // Number(userId);
+    // console.log(typeof (userId));
+    const currentUserDb = JSON.parse(fs.readFileSync('./orders.json', 'UTF-8'));
+    const result = currentUserDb.find(_order => _order.id === orderId);
+    if (result) {
+        res.json(result);
+    } else {
+        res.json(`This id:${orderId} not found`)
+    }
 
+});
+// delete one order by ID
+server.delete('/removeOrder/:id', (req, res) => {
+    const currentOrdersDb = JSON.parse(fs.readFileSync('./orders.json', 'UTF-8'));
+    const orderId = parseInt(req.params.id, 10);
+    console.log(`Deleted item with id: ${orderId}`);
+    const currentOrder = currentOrdersDb.find(_order => _order.id === orderId);
+    let filtered_orders = currentOrdersDb.filter(_order => _order !== currentOrder);
+    fs.writeFile('./orders.json', JSON.stringify(filtered_orders), err => {
+        if (err) throw err;
+    });
+    if (currentOrder) {
+        res.json(`Order with ID = ${currentOrder.id} has been deleted`);
+    } else {
+        res.json(`This ID: ${orderId} not found`)
+    }
+
+});
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
     if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
         const status = 401;
@@ -201,7 +236,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
 });
 // server.use(router);
 server.listen(3000, () => {
-    console.log('Server is running now ');
+    console.log('Backend is running now ');
     // const result = users.find(user => user.id === 3);
     // console.log(users)
 });
