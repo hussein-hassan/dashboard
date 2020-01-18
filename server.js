@@ -4,7 +4,7 @@ const jsonServer = require('json-server');
 const jwt = require('jsonwebtoken');
 
 const server = jsonServer.create();
-const router = jsonServer.router('./orders.json');
+// const router = jsonServer.router('./orders.json');
 let userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
 const orderdb = JSON.parse(fs.readFileSync('./orders.json', 'UTF-8'));
 server.use(bodyParser.urlencoded({extended: true}));
@@ -26,7 +26,8 @@ function verifyToken(token) {
 
 // Check if the user exists in database
 function isAuthenticated({username, password}) {
-    return userdb.findIndex(user => user.username === username && user.password === password) !== -1
+    let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+    return currentUsersDb.findIndex(user => user.username === username && user.password === password) !== -1
 }
 
 // get all users
@@ -55,33 +56,28 @@ server.delete('/removeUser/:id', (req, res) => {
     const userId = parseInt(req.params.id, 10);
     console.log(`Deleted item with id: ${userId}`);
     const currentUser = currentUsersDb.find(user => user.id === userId);
-    const currentUserIndex = currentUsersDb.findIndex(user => user.id === userId);
-    const filtered_users = currentUsersDb.splice(currentUserIndex, currentUser);
-    console.log(filtered_users);
+    let filtered_users = currentUsersDb.filter(_user => _user !== currentUser);
     fs.writeFile('./users.json', JSON.stringify(filtered_users), err => {
       if (err) throw err;
-      console.log('user deleted')
     });
-    if (result) {
-        res.json(result);
+    if (currentUser) {
+        res.json(`User with ID = ${currentUser.id} has been deleted`);
     } else {
-        res.json(`This id:${userId} not found`)
+        res.json(`This ID: ${userId} not found`)
     }
-    res.json(filtered_users);
+
 });
 // Register New User
 server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
     console.log(req.body);
     const {email, password, phone, role, username} = req.body;
-
     if (isAuthenticated({username, password}) === true) {
         const status = 401;
         const message = 'username  already exist';
         res.status(status).json({status, message});
         return
     }
-
     fs.readFile("./users.json", (err, data) => {
         if (err) {
             const status = 401;
@@ -137,17 +133,14 @@ server.post('/auth/login', (req, res) => {
 });
 // add orders
 server.post('/addOrder', (req, res) => {
-    console.log("addOrder endpoint called; request body:");
-    console.log(req.body);
+    console.log("Add Order endpoint called; request body:");
     const {customerName, customerAddress, customerPhone, orderDetails, orderStatus} = req.body;
-
-    // if (isAuthenticated({username, password}) === true) {
-    //   const status = 401;
-    //   const message = 'username  already exist';
-    //   res.status(status).json({status, message});
-    //   return
-    // }
-
+    if (isAuthenticated({customerName, customerAddress, customerPhone, orderDetails, orderStatus}) === true) {
+        const status = 401;
+        const message = 'username  already exist';
+        res.status(status).json({status, message});
+        return
+    }
     fs.readFile("./orders.json", (err, data) => {
         if (err) {
             const status = 401;
@@ -155,14 +148,12 @@ server.post('/addOrder', (req, res) => {
             res.status(status).json({status, message});
             return
         }
-
-        // Get current users data
+        // Get current orders data
         var data = JSON.parse(data.toString());
-
+        console.log(data[data.length - 1]);
         // Get the id of last user
         var last_item_id = data[data.length - 1].id;
-
-        //Add new order
+        //Add new user
         data.push({
             id: last_item_id + 1,
             customerName: customerName,
@@ -171,26 +162,19 @@ server.post('/addOrder', (req, res) => {
             orderDetails: orderDetails,
             orderStatus: orderStatus
         }); //add some data
-        var writeData = fs.writeFile("./orders.json", JSON.stringify(data), (err, result) => {  // WRITE
+        fs.writeFile("./orders.json", JSON.stringify(data), (err, result) => {  // WRITE
             if (err) {
                 const status = 401;
                 const message = err;
                 res.status(status).json({status, message});
 
             }
-            res.status(200).json(
-                {
-                    id: last_item_id + 1,
-                    customerName: customerName,
-                    customerAddress: customerAddress,
-                    customerPhone: customerPhone,
-                    orderDetails: orderDetails,
-                    orderStatus: orderStatus
-                }
-            );
         });
     });
+
+    res.status(200).json('Order add successfully ')
 });
+
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
     if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
         const status = 401;
@@ -215,9 +199,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
         res.status(status).json({status, message})
     }
 });
-
-server.use(router);
-
+// server.use(router);
 server.listen(3000, () => {
     console.log('Server is running now ');
     // const result = users.find(user => user.id === 3);
