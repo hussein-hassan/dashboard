@@ -67,6 +67,10 @@ server.delete('/removeUser/:id', (req, res) => {
     }
 
 });
+server.put('/updateUser/:id', (req, res) => {
+    let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+
+});
 // Register New User
 server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
@@ -118,6 +122,22 @@ server.post('/auth/login', (req, res) => {
     console.log("login endpoint called; request body:");
     console.log(req.body);
     const {username, password} = req.body;
+    console.log(typeof username);
+    if (username === '') {
+        return res.status(400).send({
+            message: "Username  can not be empty"
+        });
+    } else if (password === '') {
+        return res.status(400).send({
+            message: "Password  can not be empty"
+        });
+    }
+
+    // if(username !== ''){
+    //     return res.status(400).send({
+    //         message: `${username} is not a string`
+    //     });
+    // }
     if (isAuthenticated({username, password}) === false) {
         const status = 401;
         const message = 'Incorrect username or password';
