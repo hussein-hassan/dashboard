@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c05db5e0-3761-4f28-9a00-381ee133afbe" name="Default Changelist" comment="add: add orders, fix registerstion api">
+    <list default="true" id="c05db5e0-3761-4f28-9a00-381ee133afbe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1579367060454" duration="1895000" />
       <workItem from="1579377149754" duration="3351000" />
       <workItem from="1579425615072" duration="114000" />
-      <workItem from="1579434243871" duration="1545000" />
+      <workItem from="1579434243871" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="add: login api return token, role and username">
       <created>1579175334738</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579414169713</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add: Add validation on inputs in Login API">
+      <created>1579436297131</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579436297131</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,18 +152,19 @@
     <MESSAGE value="add: add orders, fix registerstion api" />
     <MESSAGE value="Fix: all operation except PUT" />
     <MESSAGE value="add: nodemon locally to run backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: nodemon locally to run backend" />
+    <MESSAGE value="add: Add validation on inputs in Login API" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: Add validation on inputs in Login API" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2597" y="238" key="#start-backend" timestamp="1579413636184">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2597" y="238" key="#start-backend/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579413636184" />
-    <state x="2491" y="131" key="CommitChangelistDialog2" timestamp="1579414169570">
+    <state x="2491" y="131" key="CommitChangelistDialog2" timestamp="1579436296894">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="571" y="151" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1579388214863" />
-    <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579414169570" />
+    <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579436296894" />
     <state x="2491" y="151" key="CommitChangelistDialog2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579175334553" />
     <state x="188" y="107" key="DiffContextDialog" timestamp="1579309385927">
       <screen x="0" y="23" width="1920" height="1057" />

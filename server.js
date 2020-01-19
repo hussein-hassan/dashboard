@@ -68,8 +68,13 @@ server.delete('/removeUser/:id', (req, res) => {
 
 });
 server.put('/updateUser/:id', (req, res) => {
+    let userId =parseInt(req.param.id, 10);
+    let bodyData = req.body;
+    console.log(bodyData);
     let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
-
+    currentUsersDb.find(_user => _user.id === userId);
+    console.log(currentUsersDb);
+    res.json(currentUsersDb)
 });
 // Register New User
 server.post('/auth/register', (req, res) => {
