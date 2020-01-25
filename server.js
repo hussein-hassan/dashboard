@@ -120,7 +120,11 @@ server.post('/auth/register', (req, res) => {
 // Create token for new user
     const access_token = createToken({email, password});
     console.log("Access Token:" + access_token);
-    res.status(200).json({access_token})
+    const removeProperty = prop => ({ [prop]: _, ...rest}) => rest;
+    const removePassword = removeProperty('password');
+    removePassword(req.body);
+    console.log(removePassword(req.body));
+    res.status(200).json({access_token, username: removePassword(req.body).username, role: removePassword(req.body).role})
 });
 // Login to one of the users from ./users.json
 server.post('/auth/login', (req, res) => {
