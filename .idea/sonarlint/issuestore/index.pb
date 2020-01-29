@@ -25,8 +25,6 @@ $src/app/pages/home/home.component.ts,8/3/8376ca7e849600c4cd3d99284d2eacb0c1145
 users.json,b/9/b9a3cf24e48e943560b97c62600586fba3ad4f68
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-T
-$src/app/pages/add/add.component.html,6/5/6555801b349ad038d5e3820ab63c909c7e594f11
 X
 (src/app/pages/login/login.component.html,1/d/1dcbd6012d665d15468db3a034e9e4626bd8a142
 >
@@ -35,3 +33,27 @@ V
 &src/app/pages/login/login.component.ts,6/3/63b333e518d3d6319e767caa8615e34f57519a00
 M
 src/app/app-routing.module.ts,6/f/6fd35c988c6ab19d90be440792fa8c817dd8dc67
+H
+src/app/app.component.ts,3/0/302be76b17ec3188653bea112207e65dde129e59
+a
+1src/app/components/sidebar/sidebar.component.html,e/0/e028439f0167465b7c8ab48542ee285d2cc397d0
+Q
+!src/app/pages/home/home.module.ts,5/b/5b563f90e2d37ce27070e2e0ba3028271b6fa644
+S
+#src/app/pages/login/login.module.ts,7/9/796415fc96282d12eeb083e191a31738772b88c4
+Z
+*src/app/pages/orders/orders.component.html,b/d/bdd34fab1eb224dbe10f016fcbd10f879e938b7f
+U
+%src/app/pages/orders/orders.module.ts,a/c/acda5dbe6dc1ce2c125e0ba8b9965ddf435c905f
+d
+4src/app/pages/users/add-user/add-user.component.html,2/d/2d57a9375558af36fe64f58cf15a84db2f1088d6
+V
+&src/app/pages/users/users.component.ts,c/2/c2eed58fbb4adce4608ced349a456c4bf7701320
+E
+src/app/app.module.ts,0/2/02c004b4329a0d99c45abb61a30dadfde61ecf5d
+S
+#src/app/pages/users/users.module.ts,e/8/e804c3105861ca7980dd572afa617bd6c0ee9cfa
+[
++src/app/pages/users/users-routing.module.ts,5/9/59299856cce0da4a042d5229d7926ee88de6a0f9
+X
+(src/app/pages/users/users.component.html,f/6/f63decf58bd6c5c3ec54b9d4740192008fb99954
