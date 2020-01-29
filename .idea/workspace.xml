@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05db5e0-3761-4f28-9a00-381ee133afbe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/6555801b349ad038d5e3820ab63c909c7e594f11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/users/users.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +156,7 @@
       <workItem from="1579377149754" duration="3351000" />
       <workItem from="1579425615072" duration="114000" />
       <workItem from="1579434243871" duration="2721000" />
-      <workItem from="1580313928502" duration="2130000" />
+      <workItem from="1580313928502" duration="2157000" />
     </task>
     <task id="LOCAL-00001" summary="add: login api return token, role and username">
       <created>1579175334738</created>
@@ -206,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580254323405</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixing routing">
+      <created>1580323770974</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580323770974</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +223,8 @@
     <MESSAGE value="add: nodemon locally to run backend" />
     <MESSAGE value="add: Add validation on inputs in Login API" />
     <MESSAGE value="new structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="new structure" />
+    <MESSAGE value="fixing routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing routing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -236,10 +238,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2597" y="238" key="#start-backend/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579413636184" />
-    <state x="571" y="151" key="CommitChangelistDialog2" timestamp="1580254244547">
+    <state x="571" y="151" key="CommitChangelistDialog2" timestamp="1580323770075">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="571" y="151" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580254244547" />
+    <state x="571" y="151" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323770075" />
     <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579436296894" />
     <state x="2491" y="151" key="CommitChangelistDialog2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579175334553" />
     <state x="188" y="107" key="DiffContextDialog" timestamp="1579309385927">
@@ -288,10 +290,10 @@
     </state>
     <state x="746" y="269" key="RollbackChangesDialog/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1579388241021" />
     <state x="2666" y="269" key="RollbackChangesDialog/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579173680738" />
-    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1580254333991">
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1580323787807">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="560" y="291" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580254333991" />
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323787807" />
     <state x="2480" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579414174120" />
     <state x="2480" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579175340144" />
     <state x="765" y="477" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580313940789">
