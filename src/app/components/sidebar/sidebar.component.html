@@ -9,29 +9,33 @@
     <li class="nav-item dropdown">
         <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="usersDropdown"
            role="button">
-            <i class="fas fa-fw fa-user-alt"></i>
-            <span> Users</span>
+            <i class="fas fa-fw fa-users-cog"></i>
+            <span> Manage users</span>
         </a>
         <div aria-labelledby="usersDropdown" class="dropdown-menu">
-            <a class="dropdown-item" routerLink="/users/addUser" routerLinkActive="active">Add - User</a>
+            <a class="dropdown-item" routerLink="manage-users/search-users" routerLinkActive="active">Search - Users</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/users/editUser" routerLinkActive="active">Edit - User</a>
+            <a class="dropdown-item" routerLink="manage-users/add-user" routerLinkActive="active">Add - User</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item">Delete - User</a>
+            <a class="dropdown-item" routerLink="manage-users/edit-user" routerLinkActive="active">Edit - User</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="manage-users/delete-user" routerLinkActive="active">Delete - User</a>
         </div>
     </li>
-    <li class="nav-item dropdown" routerLink="/orders" routerLinkActive="active">
+    <li class="nav-item dropdown">
         <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="ordersDropdown"
            role="button">
-            <i class="fas fa-fw fa-user-alt"></i>
-            <span> Orders</span>
+            <i class="fas fa-fw fa-shopping-cart"></i>
+            <span> Manage Orders</span>
         </a>
         <div aria-labelledby="ordersDropdown" class="dropdown-menu">
-            <a class="dropdown-item">Add - Order</a>
+            <a class="dropdown-item" routerLink="orders/search-orders" routerLinkActive="active">Search - Orders</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item">Edit - Order</a>
+            <a class="dropdown-item" routerLink="orders/add-order" routerLinkActive="active">Add - Order</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item">Delete - Order</a>
+            <a class="dropdown-item" routerLink="orders/edit-order" routerLinkActive="active">Edit - Order</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="orders/delete-order" routerLinkActive="active">Delete - Order</a>
 
 
         </div>

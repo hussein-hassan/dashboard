@@ -53,7 +53,7 @@ E
 src/app/app.module.ts,0/2/02c004b4329a0d99c45abb61a30dadfde61ecf5d
 S
 #src/app/pages/users/users.module.ts,e/8/e804c3105861ca7980dd572afa617bd6c0ee9cfa
-[
-+src/app/pages/users/users-routing.module.ts,5/9/59299856cce0da4a042d5229d7926ee88de6a0f9
 X
 (src/app/pages/users/users.component.html,f/6/f63decf58bd6c5c3ec54b9d4740192008fb99954
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0

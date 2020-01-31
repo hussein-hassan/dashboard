@@ -6,8 +6,17 @@
 
   .nav-item {
     &.active {
+
       .nav-link {
-        color: $white;
+        color: $sidebar-nav-link;
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          &.active-item {
+            background-color: $sidebar-nav-link;
+          }
+        }
       }
     }
     &.dropdown {
@@ -27,6 +36,10 @@
         .dropdown-toggle::after {
           content: '\f107';
         }
+
+        //.nav-link{
+        //  color: green;
+        //}
       }
       &.no-arrow {
         .dropdown-toggle::after {
@@ -34,11 +47,18 @@
         }
       }
     }
+
     .nav-link {
+      &.active {
+        color: red;
+      }
+
       &:focus {
+        color: green;
         // remove outline for Safari and Firefox
         outline: none;
       }
+
       .badge {
         position: absolute;
         margin-left: 0.75rem;
@@ -67,11 +87,12 @@
   @include sidebar-icons;
   .nav-item {
     .nav-link {
-      color: fade-out($white, 0.5);
+      color: fade-out($sidebar-nav-link, .30);
+
       &:active,
       &:focus,
       &:hover {
-        color: fade-out($white, 0.25);
+        color: fade-out($sidebar-nav-link, 0.20);
       }
     }
   }
