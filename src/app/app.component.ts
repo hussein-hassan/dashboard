@@ -9,6 +9,7 @@ import {Helpers} from './helpers.functions';
 })
 export class AppComponent implements OnInit {
   title = 'ngDashboard';
+    isLogin: boolean;
 
   ngOnInit(): void {
     Helpers();

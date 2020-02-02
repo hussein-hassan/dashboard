@@ -11,9 +11,13 @@ import {DeleteOrderComponent} from "./pages/orders/delete-order/delete-order.com
 import {DeleteUserComponent} from "./pages/users/delete-user/delete-user.component";
 import {SearchUsersComponent} from "./pages/users/search-users/search-users.component";
 import {SearchOrdersComponent} from "./pages/orders/search-orders/search-orders.component";
+import {AccessDeniedComponent} from "./components/access-denied/access-denied.component";
+import {LoginComponent} from "./pages/login/login.component";
 
 
 const routes: Routes = [
+    {path: '', redirectTo: '/login', pathMatch: 'full'},
+    {path: 'login', component: LoginComponent},
     {path: 'home', component: HomeComponent},
     {
         path: 'orders', component: OrdersComponent, children: [
@@ -24,13 +28,15 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'manage-users', component: UsersComponent, children: [
+        path: 'users', component: UsersComponent, children: [
             {path: 'search-users', component: SearchUsersComponent},
             {path: 'add-user', component: AddUserComponent},
             {path: 'edit-user', component: EditUserComponent},
             {path: 'delete-user', component: DeleteUserComponent},
         ]
     },
+    // wild card route
+    {path: '**', component: AccessDeniedComponent}
 ];
 
 @NgModule({

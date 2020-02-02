@@ -6,12 +6,14 @@ import {EditUserComponent} from './edit-user/edit-user.component';
 import {DeleteUserComponent} from './delete-user/delete-user.component';
 import {AppRoutingModule} from '../../app-routing.module';
 import {SearchUsersComponent} from './search-users/search-users.component'
+import {SharedComponentsModule} from "../../components/shared-components.module";
 
 @NgModule({
     declarations: [UsersComponent, AddUserComponent, EditUserComponent, DeleteUserComponent, SearchUsersComponent],
     imports: [
         CommonModule,
-        AppRoutingModule
+        AppRoutingModule,
+        SharedComponentsModule
     ],
     exports: [UsersComponent]
 })

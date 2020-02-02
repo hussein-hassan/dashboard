@@ -6,13 +6,15 @@ import {EditOrderComponent} from './edit-order/edit-order.component';
 import {DeleteOrderComponent} from './delete-order/delete-order.component';
 import {SearchOrdersComponent} from './search-orders/search-orders.component';
 import {AppRoutingModule} from '../../app-routing.module';
+import {SharedComponentsModule} from "../../components/shared-components.module";
 
 
 @NgModule({
     declarations: [OrdersComponent, AddOrderComponent, EditOrderComponent, DeleteOrderComponent, SearchOrdersComponent],
     imports: [
         CommonModule,
-        AppRoutingModule
+        AppRoutingModule,
+        SharedComponentsModule
     ]
 })
 export class OrdersModule {
