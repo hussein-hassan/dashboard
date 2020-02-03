@@ -4,6 +4,7 @@ import {LoginComponent} from "./core/components/login/login.component";
 import {NotFoundComponent} from "./core/components/not-found/not-found.component";
 
 const routes: Routes = [
+    {path: '', redirectTo: '/login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: '', loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)},
     {path: '**', component: NotFoundComponent}
