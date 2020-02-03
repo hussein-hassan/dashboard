@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05db5e0-3761-4f28-9a00-381ee133afbe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +169,7 @@
       <workItem from="1580485125433" duration="13264000" />
       <workItem from="1580653922719" duration="2830000" />
       <workItem from="1580659395489" duration="3417000" />
-      <workItem from="1580752142138" duration="13783000" />
+      <workItem from="1580752142138" duration="14300000" />
     </task>
     <task id="LOCAL-00001" summary="add: login api return token, role and username">
       <created>1579175334738</created>
@@ -246,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580767038305</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix routing and lazyload">
+      <created>1580767182200</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580767182200</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +280,10 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2693" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1580767359836">
+      <screen x="1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2693" y="274" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580767359836" />
     <state x="2618" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580758964945">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
@@ -280,12 +293,12 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2597" y="238" key="#start-backend/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579413636184" />
-    <state x="2491" y="151" key="CommitChangelistDialog2" timestamp="1580767037357">
+    <state x="2491" y="151" key="CommitChangelistDialog2" timestamp="1580767181496">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="571" y="151" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323793166" />
     <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580663474559" />
-    <state x="2491" y="151" key="CommitChangelistDialog2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580767037357" />
+    <state x="2491" y="151" key="CommitChangelistDialog2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580767181496" />
     <state x="188" y="107" key="DiffContextDialog" timestamp="1579309385927">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -336,12 +349,12 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="469" y="190" key="SettingsEditor/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580485357758" />
-    <state x="2480" y="291" key="Vcs.Push.Dialog.v2" timestamp="1580767042255">
+    <state x="2480" y="291" key="Vcs.Push.Dialog.v2" timestamp="1580767186319">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="560" y="291" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323799097" />
     <state x="2480" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580663480524" />
-    <state x="2480" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580767042255" />
+    <state x="2480" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580767186319" />
     <state x="723" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1580485298539">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
