@@ -1,0 +1,42 @@
+<!-- Sidebar -->
+<ul class="sidebar navbar-nav">
+    <li [routerLink]="'/home'" class="nav-item" routerLinkActive="active">
+        <a class="nav-link">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span> Home</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="usersDropdown"
+           role="button">
+            <i class="fas fa-fw fa-users-cog"></i>
+            <span>Manage users</span>
+        </a>
+        <div aria-labelledby="usersDropdown" class="dropdown-menu">
+            <a [routerLink]="'/users/add-user'" class="dropdown-item" routerLinkActive="active">Add - User</a>
+            <div class="dropdown-divider"></div>
+            <a [routerLink]="'/users/edit-user'" class="dropdown-item" routerLinkActive="active">Edit - User</a>
+            <div class="dropdown-divider"></div>
+            <a [routerLink]="'/users/delete-user'" class="dropdown-item" routerLinkActive="active">Delete - User</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="ordersDropdown"
+           role="button">
+            <i class="fas fa-fw fa-shopping-cart"></i>
+            <span> Manage Orders</span>
+        </a>
+        <div aria-labelledby="ordersDropdown" class="dropdown-menu">
+            <!--            <a class="dropdown-item" [routerLink]="'orders/search-orders'" routerLinkActive="active">Search - Orders</a>-->
+            <!--            <div class="dropdown-divider"></div>-->
+            <a [routerLink]="'/orders/add-order'" class="dropdown-item" routerLinkActive="active">Add - Order</a>
+            <div class="dropdown-divider"></div>
+            <a [routerLink]="'/orders/edit-order'" class="dropdown-item" routerLinkActive="active">Edit - Order</a>
+            <div class="dropdown-divider"></div>
+            <a [routerLink]="'/orders/delete-order'" class="dropdown-item" routerLinkActive="active">Delete - Order</a>
+
+
+        </div>
+    </li>
+
+</ul>

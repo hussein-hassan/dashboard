@@ -2,24 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05db5e0-3761-4f28-9a00-381ee133afbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/shared-components.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/modules/core-layout.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/features-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/features.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/orders/orders.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/users/users-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/users/users.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/241cf23cd6c39639e8e012676c2725a87177487b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/241cf23cd6c39639e8e012676c2725a87177487b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d57a9375558af36fe64f58cf15a84db2f1088d6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d57a9375558af36fe64f58cf15a84db2f1088d6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e028439f0167465b7c8ab48542ee285d2cc397d0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e028439f0167465b7c8ab48542ee285d2cc397d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/orders/orders.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/orders/orders.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/users/users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/users/users.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/access-denied/access-denied.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/access-denied/access-denied.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/access-denied/access-denied.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/access-denied/access-denied.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/access-denied/access-denied.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/access-denied/access-denied.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/access-denied/access-denied.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/access-denied/access-denied.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/breadcrumbs/breadcrumbs.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/breadcrumbs/breadcrumbs.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/breadcrumbs/breadcrumbs.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/breadcrumbs/breadcrumbs.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/breadcrumbs/breadcrumbs.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/breadcrumbs/breadcrumbs.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/breadcrumbs/breadcrumbs.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/breadcrumbs/breadcrumbs.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/header/header.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/modal/modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/modal/modal.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/modal/modal.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/modal/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/modal/modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/not-found/not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/not-found/not-found.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/not-found/not-found.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/not-found/not-found.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/not-found/not-found.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/not-found/not-found.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/not-found/not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/not-found/not-found.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/shared-components.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/sidebar/sidebar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/sidebar/sidebar.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/add-order/add-order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/add-order/add-order.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/add-order/add-order.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/add-order/add-order.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/add-order/add-order.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/add-order/add-order.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/add-order/add-order.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/add-order/add-order.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/delete-order/delete-order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/delete-order/delete-order.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/delete-order/delete-order.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/delete-order/delete-order.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/delete-order/delete-order.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/delete-order/delete-order.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/delete-order/delete-order.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/delete-order/delete-order.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/edit-order/edit-order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/edit-order/edit-order.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/edit-order/edit-order.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/edit-order/edit-order.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/edit-order/edit-order.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/edit-order/edit-order.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/edit-order/edit-order.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/edit-order/edit-order.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/orders.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/orders.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/orders.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/orders.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/orders.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/search-orders/search-orders.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/search-orders/search-orders.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/search-orders/search-orders.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/search-orders/search-orders.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/search-orders/search-orders.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/search-orders/search-orders.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/orders/search-orders/search-orders.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/orders/search-orders/search-orders.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/add-user/add-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/add-user/add-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/add-user/add-user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/add-user/add-user.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/add-user/add-user.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/add-user/add-user.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/add-user/add-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/delete-user/delete-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/delete-user/delete-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/delete-user/delete-user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/delete-user/delete-user.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/delete-user/delete-user.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/delete-user/delete-user.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/delete-user/delete-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/delete-user/delete-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/edit-user/edit-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/edit-user/edit-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/edit-user/edit-user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/edit-user/edit-user.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/edit-user/edit-user.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/edit-user/edit-user.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/edit-user/edit-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/edit-user/edit-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/search-users/search-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/search-users/search-users.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/search-users/search-users.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/search-users/search-users.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/search-users/search-users.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/search-users/search-users.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/search-users/search-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/search-users/search-users.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/users.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/users.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/users.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/users/users.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/users/users.module.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +182,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/core/components" />
+      <recent name="$PROJECT_DIR$/src/app/shared" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.start-backend">
     <configuration name="backend" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -176,7 +260,8 @@
       <workItem from="1580313928502" duration="2188000" />
       <workItem from="1580485125433" duration="13264000" />
       <workItem from="1580653922719" duration="2830000" />
-      <workItem from="1580659395489" duration="3283000" />
+      <workItem from="1580659395489" duration="3417000" />
+      <workItem from="1580752142138" duration="13572000" />
     </task>
     <task id="LOCAL-00001" summary="add: login api return token, role and username">
       <created>1579175334738</created>
@@ -234,7 +319,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580323793773</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="re routing">
+      <created>1580663463790</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580663463790</updated>
+    </task>
+    <task id="LOCAL-00010" summary="re routing">
+      <created>1580663474972</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580663474972</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,63 +350,65 @@
     <MESSAGE value="add: Add validation on inputs in Login API" />
     <MESSAGE value="new structure" />
     <MESSAGE value="fixing routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing routing" />
+    <MESSAGE value="re routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="re routing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="698" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580316627492">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="2618" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580758964945">
+      <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="698" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580316627492" />
+    <state x="2618" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580758964945" />
     <state x="2597" y="238" key="#start-backend" timestamp="1579413636184">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2597" y="238" key="#start-backend/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579413636184" />
-    <state x="2491" y="131" key="CommitChangelistDialog2" timestamp="1580663463241">
+    <state x="2491" y="131" key="CommitChangelistDialog2" timestamp="1580663474559">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="571" y="151" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323793166" />
-    <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580663463241" />
+    <state x="2491" y="131" key="CommitChangelistDialog2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580663474559" />
     <state x="2491" y="151" key="CommitChangelistDialog2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579175334553" />
     <state x="188" y="107" key="DiffContextDialog" timestamp="1579309385927">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="188" y="107" key="DiffContextDialog/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1579309385927" />
     <state x="2108" y="107" key="DiffContextDialog/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579173677711" />
-    <state width="1876" height="346" key="GridCell.Tab.0.bottom" timestamp="1580662727581">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1876" height="329" key="GridCell.Tab.0.bottom" timestamp="1580764430086">
+      <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1899" height="303" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1920.1057@-1920.23.1920.1057" timestamp="1579367079378" />
     <state width="1899" height="314" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580506182622" />
     <state width="1876" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580662727581" />
     <state width="1876" height="427" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1579199788237" />
-    <state width="1876" height="361" key="GridCell.Tab.0.bottom/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579182802942" />
-    <state width="1876" height="346" key="GridCell.Tab.0.center" timestamp="1580662727580">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1876" height="329" key="GridCell.Tab.0.bottom/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580764430086" />
+    <state width="1876" height="329" key="GridCell.Tab.0.center" timestamp="1580764430084">
+      <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1899" height="303" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1920.1057@-1920.23.1920.1057" timestamp="1579367079377" />
     <state width="1899" height="314" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580506182622" />
     <state width="1876" height="346" key="GridCell.Tab.0.center/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580662727580" />
     <state width="1876" height="427" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1579199788236" />
-    <state width="1876" height="361" key="GridCell.Tab.0.center/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579182802941" />
-    <state width="1876" height="346" key="GridCell.Tab.0.left" timestamp="1580662727578">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1876" height="329" key="GridCell.Tab.0.center/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580764430084" />
+    <state width="1876" height="329" key="GridCell.Tab.0.left" timestamp="1580764430083">
+      <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1899" height="303" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1920.1057@-1920.23.1920.1057" timestamp="1579367079376" />
     <state width="1899" height="314" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580506182621" />
     <state width="1876" height="346" key="GridCell.Tab.0.left/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580662727578" />
     <state width="1876" height="427" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1579199788236" />
-    <state width="1876" height="361" key="GridCell.Tab.0.left/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579182802940" />
-    <state width="1876" height="346" key="GridCell.Tab.0.right" timestamp="1580662727580">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1876" height="329" key="GridCell.Tab.0.left/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580764430083" />
+    <state width="1876" height="329" key="GridCell.Tab.0.right" timestamp="1580764430084">
+      <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1899" height="303" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1920.1057@-1920.23.1920.1057" timestamp="1579367079378" />
     <state width="1899" height="314" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580506182622" />
     <state width="1876" height="346" key="GridCell.Tab.0.right/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580662727580" />
     <state width="1876" height="427" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1579199788236" />
-    <state width="1876" height="361" key="GridCell.Tab.0.right/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579182802942" />
+    <state width="1876" height="329" key="GridCell.Tab.0.right/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1580764430084" />
     <state x="676" y="274" key="MultipleFileMergeDialog" timestamp="1580247327682">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -321,11 +422,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="469" y="190" key="SettingsEditor/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580485357758" />
-    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1580323799097">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="2480" y="274" key="Vcs.Push.Dialog.v2" timestamp="1580663480524">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="291" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1580323799097" />
-    <state x="2480" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579414174120" />
+    <state x="2480" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580663480524" />
     <state x="2480" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1177/1920.23.1920.1057@1920.23.1920.1057" timestamp="1579175340144" />
     <state x="723" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1580485298539">
       <screen x="0" y="23" width="1920" height="1057" />
