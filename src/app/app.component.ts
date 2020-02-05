@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Helpers} from './helpers.functions';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

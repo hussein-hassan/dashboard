@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
     isRegister: boolean;
     formTitle: string;
 
-  constructor() {
+    constructor() {
     }
 
     ngOnInit() {
@@ -18,11 +18,16 @@ export class LoginComponent implements OnInit {
         console.log(this.formTitle);
     }
 
-    registerUser() {
+    showRegisterForm() {
         this.isRegister = !this.isRegister;
         this.isLogin = false;
         this.formTitle = 'Register';
     }
 
 
+    showLoginForm() {
+        this.isLogin = !this.isLogin;
+        this.isRegister = false;
+        this.formTitle = 'Login';
+    }
 }
