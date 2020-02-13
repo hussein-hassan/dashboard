@@ -1,19 +1,19 @@
 <div class="container">
     <div class="card card-login mx-auto mt-5">
-        <div class="card-header">{{formTitle}}</div>
+        <div class="card-header">Login</div>
         <div class="card-body">
             <!--      log in form-->
-            <form *ngIf="isLogin">
+            <form #loginForm="ngForm">
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input class="form-control" id="inputUsername" placeholder="User name" type="text">
+                        <input class="form-control" id="inputUsername" name="userName" ngModel placeholder="User name" type="text">
                         <label for="inputUsername">Username</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input class="form-control" id="login-password" placeholder="Password" required="required"
-                               type="password">
+                        <input class="form-control" id="login-password" name="password" ngModel placeholder="Password"
+                               required="required" type="password">
                         <label for="login-password">Password</label>
                     </div>
                 </div>
@@ -25,56 +25,10 @@
                         </label>
                     </div>
                 </div>
-                <button [routerLink]="'/home'" class="btn btn-primary btn-block">Login</button>
+                <button [routerLink]="'/home'" class="btn btn-primary btn-block" type="submit ">Login</button>
                 <div class="text-center">
-                    <button (click)="showRegisterForm()" *ngIf="isLogin" class="btn btn-link small">Register an Account
+                    <button [routerLink]="'/register'" class="btn btn-link small">Register an Account
                     </button>
-                </div>
-            </form>
-            <!--      register form-->
-            <form *ngIf="isRegister">
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <input autofocus="autofocus" class="form-control" id="firstName"
-                                       placeholder="First name"
-                                       required="required" type="text">
-                                <label for="firstName">Username</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label-group">
-                        <input class="form-control" id="inputEmail" placeholder="Email address" required="required"
-                               type="email">
-                        <label for="inputEmail">Email address</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input class="form-control" id="inputPassword" placeholder="Password"
-                                       required="required"
-                                       type="password">
-                                <label for="inputPassword">Password</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-label-group">
-                                <input class="form-control" id="confirmPassword" placeholder="Confirm password"
-                                       required="required"
-                                       type="password">
-                                <label for="confirmPassword">Confirm password</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button [routerLink]="'/home'" class="btn btn-primary btn-block">Register</button>
-                <div class="text-center">
-                    <button (click)="showLoginForm()" class="btn btn-link small">Already have account</button>
                 </div>
             </form>
         </div>

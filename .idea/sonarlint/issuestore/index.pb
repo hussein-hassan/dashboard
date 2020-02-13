@@ -203,3 +203,7 @@ o
 ?src/app/features/users/search-users/search-users.component.html,4/0/40428bce7cc39f3d165515781cd3e02bb93bb1f3
 `
 0src/app/core/components/modal/modal.component.ts,5/4/54c3afaf03a59915ef15756fb109799a967bcaf0
+T
+$src/environments/environment.prod.ts,c/7/c7c271980f0e24b4ca8172b2c15322f125123fad
+O
+src/environments/environment.ts,9/e/9e665cec867bbf89b5afc6420722808938387dc4

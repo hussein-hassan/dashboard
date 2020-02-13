@@ -81,6 +81,15 @@ server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
     console.log(req.body);
     const {email, password, phone, role, username} = req.body;
+    if (username === '') {
+        return res.status(400).send({
+            message: "Username  can not be empty"
+        });
+    } else if (password === '') {
+        return res.status(400).send({
+            message: "Password  can not be empty"
+        });
+    }
     if (isAuthenticated({username, password}) === true) {
         const status = 401;
         const message = 'username  already exist';

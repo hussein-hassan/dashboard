@@ -6,6 +6,10 @@ import {LoginComponent} from "./core/components/login/login.component";
 import {CoreLayoutModule} from "./core/modules/core-layout.module";
 import {NotFoundComponent} from "./core/components/not-found/not-found.component";
 import {AccessDeniedComponent} from "./core/components/access-denied/access-denied.component";
+import {RegisterComponent} from './core/components/register/register.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {AuthService} from "./core/services/auth.service";
 
 
 @NgModule({
@@ -13,18 +17,21 @@ import {AccessDeniedComponent} from "./core/components/access-denied/access-deni
         AppComponent,
         LoginComponent,
         NotFoundComponent,
-        AccessDeniedComponent
+        AccessDeniedComponent,
+        RegisterComponent
 
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         CoreLayoutModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule
 
 
     ],
-    providers: [],
+    providers: [AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
