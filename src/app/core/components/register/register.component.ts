@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {Subscription} from 'rxjs';
+import {RegisterUserData} from "../../models/register-user-data";
 
 @Component({
     selector: 'app-register',
@@ -8,13 +9,14 @@ import {Subscription} from 'rxjs';
     styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit, OnDestroy {
-    registerUserData = {};
+    registerUserData = new RegisterUserData();
     private authSubscription: Subscription;
 
     constructor(private _auth: AuthService) {
     }
 
     ngOnInit() {
+        console.log(this.registerUserData)
     }
 
     ngOnDestroy(): void {

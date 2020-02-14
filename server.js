@@ -68,7 +68,7 @@ server.delete('/removeUser/:id', (req, res) => {
 
 });
 server.put('/updateUser/:id', (req, res) => {
-    let userId =parseInt(req.param.id, 10);
+    let userId = parseInt(req.param.id, 10);
     let bodyData = req.body;
     console.log(bodyData);
     let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
@@ -81,11 +81,11 @@ server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
     console.log(req.body);
     const {email, password, phone, role, username} = req.body;
-    if (username === '') {
+    if (username === undefined || username === '') {
         return res.status(400).send({
             message: "Username  can not be empty"
         });
-    } else if (password === '') {
+    } else if (password === '' || password === undefined) {
         return res.status(400).send({
             message: "Password  can not be empty"
         });
@@ -108,6 +108,7 @@ server.post('/auth/register', (req, res) => {
         // Get the id of last user
         var last_item_id = data[data.length - 1].id;
         //Add new user
+
         data.push({
             id: last_item_id + 1,
             email: email,
@@ -115,7 +116,9 @@ server.post('/auth/register', (req, res) => {
             phone: phone,
             role: role,
             username: username
-        }); //add some data
+        });
+
+        //add some data
         fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {  // WRITE
             if (err) {
                 const status = 401;
@@ -129,7 +132,7 @@ server.post('/auth/register', (req, res) => {
 // Create token for new user
     const access_token = createToken({email, password});
     console.log("Access Token:" + access_token);
-    const removeProperty = prop => ({ [prop]: _, ...rest}) => rest;
+    const removeProperty = prop => ({[prop]: _, ...rest}) => rest;
     const removePassword = removeProperty('password');
     removePassword(req.body);
     console.log(removePassword(req.body));

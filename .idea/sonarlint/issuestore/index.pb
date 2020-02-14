@@ -207,3 +207,5 @@ T
 $src/environments/environment.prod.ts,c/7/c7c271980f0e24b4ca8172b2c15322f125123fad
 O
 src/environments/environment.ts,9/e/9e665cec867bbf89b5afc6420722808938387dc4
+E
+src/scss/_navbar.scss,8/6/868ed6e893f6025bd8accfd7046eab83acb3f90e
