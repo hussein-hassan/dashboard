@@ -13,22 +13,28 @@ export class RegisterComponent implements OnInit, OnDestroy {
     private authSubscription: Subscription;
 
     constructor(private _auth: AuthService) {
-    }
 
-    ngOnInit() {
-        console.log(this.registerUserData)
-    }
-
-    ngOnDestroy(): void {
     }
 
     registerUser() {
-        this._auth.registerUser(this.registerUserData).subscribe(
+        this.authSubscription = this._auth.registerUser(this.registerUserData).subscribe(
             res => {
                 console.log(res)
             },
             error => {
                 console.log(error)
             })
+
     }
+
+    ngOnInit() {
+    }
+
+    ngOnDestroy(): void {
+        if (this.authSubscription) {
+            this.authSubscription.unsubscribe();
+            console.log('un subscribed')
+        }
+    }
+
 }

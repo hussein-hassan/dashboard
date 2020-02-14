@@ -7,7 +7,7 @@ import {CoreLayoutModule} from "./core/modules/core-layout.module";
 import {NotFoundComponent} from "./core/components/not-found/not-found.component";
 import {AccessDeniedComponent} from "./core/components/access-denied/access-denied.component";
 import {RegisterComponent} from './core/components/register/register.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./core/services/auth.service";
 
@@ -27,6 +27,7 @@ import {AuthService} from "./core/services/auth.service";
         CoreLayoutModule,
         AppRoutingModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpClientModule
 
 

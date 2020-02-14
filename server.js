@@ -26,7 +26,7 @@ function verifyToken(token) {
 // Check if the user exists in database
 function isAuthenticated({username, password}) {
     let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
-    return currentUsersDb.findIndex(user => user.username === username && user.password === password) !== -1
+    return currentUsersDb.findIndex(user => user.username === username || user.password === password) !== -1
 }
 
 // get all users

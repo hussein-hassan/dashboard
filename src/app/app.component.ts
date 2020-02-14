@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, isDevMode, OnInit} from '@angular/core';
 import {Helpers} from './helpers.functions';
 
 @Component({
@@ -7,11 +7,12 @@ import {Helpers} from './helpers.functions';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ngDashboard';
-    isLogin: boolean;
-
   ngOnInit(): void {
     Helpers();
-      console.log('style');
+    if (!isDevMode()) {
+      window.console.log = function () {
+
+      }
+    }
   }
 }

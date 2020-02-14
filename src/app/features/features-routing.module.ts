@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {UsersComponent} from "./users/users.component";
-import {SearchUsersComponent} from "./users/search-users/search-users.component";
 import {FeaturesComponent} from "./features.component";
 import {AddUserComponent} from "./users/add-user/add-user.component";
 import {EditUserComponent} from "./users/edit-user/edit-user.component";
@@ -38,8 +37,8 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [SearchUsersComponent, AddUserComponent, DeleteUserComponent, EditUserComponent,
-    AddOrderComponent, EditOrderComponent, DeleteOrderComponent],
+  declarations: [AddUserComponent, DeleteUserComponent, EditUserComponent,
+      AddOrderComponent, EditOrderComponent, DeleteOrderComponent],
   imports: [
     RouterModule,
     [RouterModule.forChild(routes)]
