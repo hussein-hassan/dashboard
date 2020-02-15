@@ -1,5 +1,5 @@
 import {Component, isDevMode, OnInit} from '@angular/core';
-import {Helpers} from './helpers.functions';
+import {Helpers} from './core/functions/helpers.functions';
 
 @Component({
   selector: 'app-root',

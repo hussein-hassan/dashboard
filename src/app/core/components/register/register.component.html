@@ -1,53 +1,104 @@
 <div class="container">
     <div class="card card-login mx-auto mt-5">
         <div class="card-header">Register</div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-12">
-                                <div class="form-label-group">
-                                    <input [(ngModel)]="registerUserData.username" autofocus="autofocus" class="form-control" id="username"
-                                           name="username"
-                                           placeholder="write here your username"
-                                           required="required" type="text">
-                                    <label for="username">Username</label>
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm" class="needs-validation">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <div class="form-label-group">
+                                <input [class.is-invalid]="_username.invalid && _username.touched"
+                                       [class.is-valid]="_username.valid"
+                                       class="form-control"
+                                       formControlName="username" id="username" name="username" placeholder="write here your username"
+                                       required="required"
+                                       type="text">
+                                <label for="username">username</label>
+                                <div class="valid-feedback">
+                                    Looks good username !
+                                </div>
+                                <div *ngIf="_username.invalid && _username.touched"
+                                     class="invalid-feedback">
+                                    <p *ngIf="_username.errors?.required" class="m-0 font-weight-bold">* Please write a username</p>
+                                    <p *ngIf="_username.errors?.minlength" class="m-0 font-weight-bold">* username can not be less than 3
+                                        characters
+                                    <p *ngIf="_username.errors?.maxlength" class="m-0 font-weight-bold">* username can not be more than 12
+                                        characters</p>
+                                    <p *ngIf="_username.errors?.pattern" class="m-0 font-weight-bold">* username can not be start or end with
+                                        number
+                                        or special character</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="form-label-group">
-                            <input [(ngModel)]="registerUserData.email" class="form-control" id="inputEmail" name="email" placeholder="Email address" required="required"
-                                   type="email">
-                            <label for="inputEmail">Email address</label>
+                </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input [class.is-invalid]="_email.invalid && _email.touched"
+                               [class.is-valid]="_email.valid"
+                               class="form-control" formControlName="email" id="inputEmail" name="email" placeholder="Email address"
+                               required="required" type="email">
+                        <label for="inputEmail">Email address</label>
+                        <div class="valid-feedback">
+                            Looks good email address!
                         </div>
+                        <div *ngIf="_email.invalid && _email.touched" class="invalid-feedback">
+                            <p *ngIf="_email.errors?.required" class="m-0 font-weight-bold">* Please write a email address</p>
+                            <p *ngIf="_email.errors?.pattern" class="m-0 font-weight-bold">* Please write a valid email address</p>
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-6">
-                                <div class="form-label-group">
-                                    <input [(ngModel)]="registerUserData.password" class="form-control" id="inputPassword" name="password" placeholder="Password"
-                                           required="required"
-                                           type="password">
-                                    <label for="inputPassword">Password</label>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-label-group">
+                                <input [class.is-invalid]="_password.invalid && _password.touched" [class.is-valid]="_password.valid"
+                                       class="form-control"
+                                       formControlName="password" id="inputPassword" name="password" placeholder="Password"
+                                       required="required"
+                                       type="password">
+                                <label for="inputPassword">Password</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div *ngIf="_password.invalid && _password.touched" class="invalid-feedback">
+                                    <p *ngIf="_password.errors?.minlength" class="m-0 font-weight-bold">* password should not be less than 6
+                                        characters</p>
+                                    <p *ngIf="_password.errors?.required" class="m-0 font-weight-bold">* Please write a password</p>
+                                    <p *ngIf="_password.errors?.pattern" class="m-0 font-weight-bold">* password should have one lower case</p>
+                                    <p *ngIf="_password.errors?.pattern" class="m-0 font-weight-bold">* password should have one upper case</p>
+                                    <p *ngIf="_password.errors?.pattern" class="m-0 font-weight-bold">* password should not has a space</p>
+                                    <p *ngIf="_password.errors?.pattern" class="m-0 font-weight-bold">* password should have one digit </p>
                                 </div>
                             </div>
-<!--                            <div class="col-md-6">-->
-<!--                                <div class="form-label-group">-->
-<!--                                    <input class="form-control" id="confirmPassword" placeholder="Confirm password"-->
-<!--                                           required="required"-->
-<!--                                           type="password">-->
-<!--                                    <label for="confirmPassword">Confirm password</label>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group">
+                                <input [class.is-invalid]="registrationForm.errors?.notMatch"
+                                       [class.is-valid]="!registrationForm.errors?.notMatch && registrationForm.get('confirmPassword').valid"
+                                       class="form-control" formControlName="confirmPassword" id="confirmPassword"
+                                       placeholder="Confirm password"
+                                       required="required"
+                                       type="password">
+                                <label for="confirmPassword">Confirm password</label>
+                                <div class="valid-feedback">
+                                    the password matched
+                                </div>
+                                <div *ngIf="registrationForm.errors?.notMatch"
+                                     class="invalid-feedback">
+                                    <p *ngIf="registrationForm.errors?.notMatch" class="m-0 font-weight-bold">* password not matched </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button (click)="registerUser()" class="btn btn-primary btn-block">Register</button>
-                    <div class="text-center">
-                        <button [routerLink]="'/login'" class="btn btn-link small">Already have account</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <button [disabled]="!registrationForm.valid" class="btn btn-primary btn-block">Register</button>
+                <div class="text-center">
+                    <button [routerLink]="'/login'" class="btn btn-link small">Already have account</button>
+                </div>
+                {{registrationForm.value | json}}
+            </form>
+        </div>
     </div>
 </div>
