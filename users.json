@@ -6,5 +6,12 @@
     "phone": "01207077747",
     "password": "sona123",
     "role": "admin"
+  },
+  {
+    "id": 2,
+    "email": "hussein.hassan@vodafone.com",
+    "password": "Sona123",
+    "role": "agent",
+    "username": "sona"
   }
 ]

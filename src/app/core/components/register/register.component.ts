@@ -16,7 +16,8 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     password: string;
     confirmPassword?: string;
     role? = "agent";
-    private authSubscription: Subscription;
+    formErrors: string;
+    private registerSubscription: Subscription;
     registrationForm = this._formBuilder.group({
         username: [this.username, [Validators.required, Validators.minLength(3), Validators.pattern('^[a-z](?!.*?[^\\na-z0-9]{2}).*?[a-z0-9]$'),
             Validators.maxLength(12)]],
@@ -25,6 +26,7 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
         confirmPassword: [this.confirmPassword, [Validators.required]],
         role: this.role = 'agent'
     }, {validator: PasswordValidator});
+    private hasError: boolean;
 
     constructor(private _authService: AuthService, private _formBuilder: FormBuilder) {
     }
@@ -42,7 +44,16 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     }
 
     onSubmit() {
-        console.log(this.registrationForm.value)
+        this.registerSubscription = this._authService.register(this.registrationForm.value).subscribe(
+            response => {
+                console.log(response)
+            },
+            error => {
+                console.log(error);
+                this.hasError = true;
+                this.formErrors = error.error.message;
+            }
+        )
     }
 
     ngOnInit() {
@@ -50,8 +61,8 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     }
 
     ngOnDestroy(): void {
-        if (this.authSubscription) {
-            this.authSubscription.unsubscribe();
+        if (this.registerSubscription) {
+            this.registerSubscription.unsubscribe();
             console.log('un subscribed')
         }
     }
