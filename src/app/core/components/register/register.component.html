@@ -2,7 +2,7 @@
     <div class="card card-login mx-auto mt-5">
         <div class="card-header">Register</div>
         <div class="card-body">
-            <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm">
+            <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm" novalidate>
                 <div *ngIf="hasError" class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Registration Failed !</h4>
                     <p>{{this.formErrors}}</p>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <button [disabled]="!registrationForm.valid" class="btn btn-primary btn-block">Register</button>
+                <button [disabled]="registrationForm.invalid" class="btn btn-primary btn-block">Register</button>
                 <div class="text-center">
                     <button [routerLink]="'/login'" class="btn btn-link small">Already have account</button>
                 </div>

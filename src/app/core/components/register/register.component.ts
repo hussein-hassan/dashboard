@@ -4,6 +4,7 @@ import {Subscription} from 'rxjs';
 import {UserData} from "../../models/user-data.interface";
 import {FormBuilder, Validators} from "@angular/forms";
 import {PasswordValidator} from "../../functions/validators/password.validators";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-register',
@@ -28,7 +29,7 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     }, {validator: PasswordValidator});
     private hasError: boolean;
 
-    constructor(private _authService: AuthService, private _formBuilder: FormBuilder) {
+    constructor(private _authService: AuthService, private _formBuilder: FormBuilder, private router: Router) {
     }
 
     get _username() {
@@ -46,7 +47,9 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     onSubmit() {
         this.registerSubscription = this._authService.register(this.registrationForm.value).subscribe(
             response => {
-                console.log(response)
+                console.log('success');
+                this.router.navigate(['/home'])
+
             },
             error => {
                 console.log(error);
