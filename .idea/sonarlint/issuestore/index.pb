@@ -125,14 +125,6 @@ o
 ?src/app/features/orders/edit-order/edit-order.component.spec.ts,4/f/4fa8801c78b9b25dab91525db680877bf7608397
 j
 :src/app/features/orders/edit-order/edit-order.component.ts,e/6/e6faeb800c47f1dcf13410b2b71b855d53ac8fd8
-r
-Bsrc/app/features/orders/search-orders/search-orders.component.html,3/7/3723ddf1a0adc5c7a68ec695df2e636c4ba01df1
-r
-Bsrc/app/features/orders/search-orders/search-orders.component.scss,1/f/1fd8cc1ba30f6b10e6e8e9fd5dff724b2d774f3d
-u
-Esrc/app/features/orders/search-orders/search-orders.component.spec.ts,5/d/5daeb381f2b6dfbef42ac3881d3c40bdd1716a26
-p
-@src/app/features/orders/search-orders/search-orders.component.ts,c/a/ca7f572f2f700b1f068924df2afa8375e3b56e2b
 ]
 -src/app/features/orders/orders.component.html,e/3/e3248c19434a3025c3295e9c7abb9eac319d6f0e
 ]
@@ -167,12 +159,6 @@ l
 <src/app/features/users/edit-user/edit-user.component.spec.ts,3/f/3fc66cf942b270742255887c5dc6fdc26cf8ae05
 g
 7src/app/features/users/edit-user/edit-user.component.ts,d/e/de2fdaa483cf4078b3d1e8df551883c499dbac86
-o
-?src/app/features/users/search-users/search-users.component.scss,4/e/4ea69b30b69f99572ee816abe95f212bb1f8eec8
-r
-Bsrc/app/features/users/search-users/search-users.component.spec.ts,3/8/382ca031722c6c96e28b7e512763e570c436397c
-m
-=src/app/features/users/search-users/search-users.component.ts,7/7/77dbd5799a36935450b1e90092dae048849759a3
 [
 +src/app/features/users/users.component.html,8/f/8ff2adf9c3f7fa42b12ebf4826504636b4e933ff
 [
@@ -181,8 +167,6 @@ m
 .src/app/features/users/users.component.spec.ts,8/e/8edbfa0055794b489ea189c888d60fd2b2bc9750
 Y
 )src/app/features/users/users.component.ts,f/9/f9e25c5b4d4764788b5417de5f60d087ad6d58c5
-^
-.src/app/features/users/users-routing.module.ts,c/3/c3f96d064555c3b62c66f4110c5f447b8c9741fd
 X
 (src/app/features/features.component.html,9/d/9db88da230a2f5eb597acc770818591d9198a0fc
 X
@@ -199,8 +183,6 @@ b
 2src/app/core/components/modal/modal.component.html,8/1/81ed8622c0fe92fc41a22ca5ced4784d319cdbff
 [
 +src/app/features/features-routing.module.ts,f/e/fe3048fb8a4ec5760e70f28cf73c775e72070883
-o
-?src/app/features/users/search-users/search-users.component.html,4/0/40428bce7cc39f3d165515781cd3e02bb93bb1f3
 `
 0src/app/core/components/modal/modal.component.ts,5/4/54c3afaf03a59915ef15756fb109799a967bcaf0
 T
@@ -209,3 +191,11 @@ O
 src/environments/environment.ts,9/e/9e665cec867bbf89b5afc6420722808938387dc4
 E
 src/scss/_navbar.scss,8/6/868ed6e893f6025bd8accfd7046eab83acb3f90e
+U
+%src/app/core/services/auth.service.ts,3/9/397f101ace3db81625cc61573d23748e528a8751
+h
+8src/app/core/components/register/register.component.html,d/5/d5a394d3757e224784b3541adaddfe3a664788a5
+f
+6src/app/core/components/register/register.component.ts,b/c/bc1916316c476f1f16b88ec41029cce86f392f78
+Z
+*src/app/core/models/user-data.interface.ts,2/2/2228d320751fb3f74a11c983b2adf390567c5a37

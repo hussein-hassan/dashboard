@@ -6,26 +6,40 @@
             <form #loginForm="ngForm">
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input class="form-control" id="inputUsername" name="userName" ngModel placeholder="User name" type="text">
+                        <input #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control"
+                               id="inputUsername" maxlength="12" minlength="3"
+                               name="username" ngModel pattern="^[a-z](?!.*?[^\na-z0-9]{2}).*?[a-z0-9]$"
+                               placeholder="write username here" required type="text">
                         <label for="inputUsername">Username</label>
+                        <div *ngIf="username.errors && (username.invalid || username.touched)" class="invalid-feedback">
+                            <p *ngIf="username.errors.required" class="m-0 font-weight-bold">* username is required
+                            </p>
+                            <p *ngIf="username.errors.pattern" class="m-0 font-weight-bold">* username can not be start or end with
+                                number
+                                or special character
+                            </p>
+                            <p *ngIf="username.errors.minlength" class="m-0 font-weight-bold">* username can not be less than 3 chars
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input class="form-control" id="login-password" name="password" ngModel placeholder="Password"
+                        <input class="form-control" id="inputPassword" name="password" ngModel placeholder="Password"
                                required="required" type="password">
-                        <label for="login-password">Password</label>
+                        <label for="inputPassword">Password</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="remember-me">
+                            <input name="rememberMe" ngModel type="checkbox" value="remember-me">
                             Remember Password
                         </label>
                     </div>
                 </div>
-                <button [routerLink]="'/home'" class="btn btn-primary btn-block" type="submit ">Login</button>
+                <button class="btn btn-primary btn-block" type="submit">Login</button>
+                {{loginForm.value | json}}
                 <div class="text-center">
                     <button [routerLink]="'/register'" class="btn btn-link small">Register an Account
                     </button>

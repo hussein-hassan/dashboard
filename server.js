@@ -85,18 +85,20 @@ server.post('/auth/register', (req, res) => {
         return res.status(400).send({
             message: "Username  can not be empty"
         });
-    } else if (password === '' || password === undefined) {
+    }
+    if (password === '' || password === undefined) {
         return res.status(400).send({
             message: "Password  can not be empty"
         });
     }
-    else if (isAuthenticated({username}) === true) {
+    if (isAuthenticated({username}) === true) {
         const status = 401;
         const message = 'username  already exist';
         res.status(status).json({status, message});
+        console.log(username);
         return
     }
-    else if (isAuthenticated({email}) === true) {
+    if (isAuthenticated({email}) === true) {
         const status = 401;
         const message = 'Email Address  Already Exist';
         res.status(status).json({status, message});

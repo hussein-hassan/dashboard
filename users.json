@@ -1,1 +1,17 @@
-[{"id":1,"username":"v19hhassan37","email":"hussein.hassan@vodafone.com","phone":"01207077747","password":"sona123","role":"admin"},{"id":2,"email":"asdasdasd@sasdasd","password":"Sona123","role":"agent","username":"sda"},{"id":3,"email":"sona@sona","password":"Sona123","role":"agent","username":"sona"}]
+[
+  {
+    "id": 1,
+    "username": "v19hhassan37",
+    "email": "hussein.hassan@vodafone.com",
+    "phone": "01207077747",
+    "password": "sona123",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "email": "hussienfarghal@gmail.com",
+    "password": "Farghal123",
+    "role": "agent",
+    "username": "hfarghal"
+  }
+]
