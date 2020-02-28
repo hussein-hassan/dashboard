@@ -24,9 +24,9 @@ function verifyToken(token) {
 }
 
 // Check if the user exists in database
-function isAuthenticated({username, password}) {
+function isAuthenticated({username, password, email}) {
     let currentUsersDb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
-    return currentUsersDb.findIndex(user => user.username === username || user.password === password) !== -1
+    return currentUsersDb.findIndex(user => user.username === username || user.password === password || user.email === email) !== -1
 }
 
 // get all users
@@ -81,7 +81,7 @@ server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
     console.log(req.body);
     const {email, password, phone, role, username} = req.body;
-    if (username === undefined || username === '') {
+    if (username === undefined || username === '' || username === null) {
         return res.status(400).send({
             message: "Username  can not be empty"
         });
@@ -90,9 +90,15 @@ server.post('/auth/register', (req, res) => {
             message: "Password  can not be empty"
         });
     }
-    if (isAuthenticated({username, password}) === true) {
+    else if (isAuthenticated({username}) === true) {
         const status = 401;
         const message = 'username  already exist';
+        res.status(status).json({status, message});
+        return
+    }
+    else if (isAuthenticated({email}) === true) {
+        const status = 401;
+        const message = 'Email Address  Already Exist';
         res.status(status).json({status, message});
         return
     }
