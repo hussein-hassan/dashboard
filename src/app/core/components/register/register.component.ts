@@ -52,13 +52,14 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
 
             },
             error => {
-                this.errorMsg = error
+                this.errorMsg = error.error.message;
+                console.log(this.errorMsg);
             }
         )
     }
 
     ngOnInit() {
-
+        console.log(this.errorMsg);
     }
 
     ngOnDestroy(): void {

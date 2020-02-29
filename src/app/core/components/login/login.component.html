@@ -4,10 +4,10 @@
         <div class="card-body">
             <!--      log in form-->
             <form #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-                <div *ngIf="hasError" class="alert alert-danger" role="alert">
+                <div *ngIf="errorMsg" class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Login Failed !</h4>
                     <!--                    <p>{{this.formErrors}}</p>-->
-                    <p class="mb-0">{{this.formErrors}}</p>
+                    <p class="mb-0">{{this.errorMsg}}</p>
                     <hr>
                 </div>
                 <div class="form-group">
@@ -53,7 +53,6 @@
                     </div>
                 </div>
                 <button [disabled]="loginForm.invalid" class="btn btn-primary btn-block" type="submit">Login</button>
-                {{loginForm.value | json}}
                 <div class="text-center">
                     <button [routerLink]="'/register'" class="btn btn-link small">Register an Account
                     </button>

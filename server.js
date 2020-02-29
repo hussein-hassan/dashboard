@@ -188,7 +188,13 @@ server.post('/auth/login', (req, res) => {
     //         message: `${username} is not a string`
     //     });
     // }
-    if (isAuthenticated({username, password}) === false) {
+    if (isAuthenticated({username}) === false) {
+        const status = 401;
+        const message = 'Incorrect username or password';
+        res.status(status).json({status, message});
+        return
+    }
+    if (isAuthenticated({password}) === false) {
         const status = 401;
         const message = 'Incorrect username or password';
         res.status(status).json({status, message});

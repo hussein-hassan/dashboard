@@ -12,8 +12,7 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit, OnDestroy, UserData {
     username: string;
     password: string;
-    private hasError: boolean;
-    private formErrors: any;
+    errorMsg: any;
     loginSubscription: Subscription;
     loginFormValues: UserData = {
         username: this.username,
@@ -42,8 +41,7 @@ export class LoginComponent implements OnInit, OnDestroy, UserData {
             },
             error => {
                 console.log(error);
-                this.hasError = true;
-                this.formErrors = error.error.message;
+                this.errorMsg = error.error.message;
             }
         )
     }
