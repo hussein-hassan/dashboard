@@ -81,29 +81,50 @@ server.post('/auth/register', (req, res) => {
     console.log("register endpoint called; request body:");
     console.log(req.body);
     const {email, password, phone, role, username} = req.body;
-    if (username === undefined || username === '' || username === null) {
+    let emptyUsername = username === undefined || username === '' || username === null;
+    let emptyPassword = password === undefined || password === '' || password === null;
+    let emptyEmail = email === undefined || email === '' || email === null;
+    if (emptyUsername || emptyPassword || emptyEmail) {
+        let errorMessages = [];
+        if (emptyUsername) {
+            errorMessages.push('Username can not be empty')
+        }
+        if (emptyPassword) {
+            errorMessages.push('Password can not be empty')
+        }
+        if (emptyEmail) {
+            errorMessages.push('Email can not be empty')
+        }
         return res.status(400).send({
-            message: "Username  can not be empty"
+            message: errorMessages
         });
     }
-    if (password === '' || password === undefined) {
-        return res.status(400).send({
-            message: "Password  can not be empty"
-        });
-    }
-    if (isAuthenticated({username}) === true) {
+    // if (password === '' || password === undefined || password === null) {
+    //     return res.status(400).send({
+    //         message: "Password  can not be empty"
+    //     });
+    // }
+    let usernameExist = isAuthenticated({username});
+    let emailExist = isAuthenticated({email});
+    if (usernameExist || emailExist) {
         const status = 401;
-        const message = 'username  already exist';
-        res.status(status).json({status, message});
+        let errorMessages = [];
+        if (usernameExist) {
+            errorMessages.push('username is exist')
+        }
+        if (emailExist) {
+            errorMessages.push('email is exist')
+        }
+        res.status(401).send({message: errorMessages});
         console.log(username);
         return
     }
-    if (isAuthenticated({email}) === true) {
-        const status = 401;
-        const message = 'Email Address  Already Exist';
-        res.status(status).json({status, message});
-        return
-    }
+    // if (isAuthenticated({email}) === true) {
+    //     const status = 401;
+    //     const message = 'Email Address  Already Exist';
+    //     res.status(status).json({status, message});
+    //     return
+    // }
     fs.readFile("./users.json", (err, data) => {
         if (err) {
             const status = 401;
