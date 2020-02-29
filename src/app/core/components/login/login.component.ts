@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {UserData} from "../../models/user-data.interface";
 import {AuthService} from "../../services/auth.service";
 import {Subscription} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-login',
@@ -11,9 +12,14 @@ import {Subscription} from "rxjs";
 export class LoginComponent implements OnInit, OnDestroy, UserData {
     username: string;
     password: string;
-    private loginSubscription: Subscription;
-
-    constructor(private _authService: AuthService) {
+    private hasError: boolean;
+    private formErrors: any;
+    loginSubscription: Subscription;
+    loginFormValues: UserData = {
+        username: this.username,
+        password: this.password
+    };
+    constructor(private _authService: AuthService, private router: Router) {
     }
 
     ngOnInit() {
@@ -26,4 +32,19 @@ export class LoginComponent implements OnInit, OnDestroy, UserData {
         }
     }
 
+    onSubmit() {
+
+        this.loginSubscription = this._authService.login(this.loginFormValues).subscribe(
+            response => {
+                console.log(this.loginFormValues);
+                this.router.navigate(['/home'])
+
+            },
+            error => {
+                console.log(error);
+                this.hasError = true;
+                this.formErrors = error.error.message;
+            }
+        )
+    }
 }

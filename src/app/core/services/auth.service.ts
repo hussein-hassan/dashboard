@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {UserData} from "../models/user-data.interface";
+import {catchError} from "rxjs/operators";
+import {throwError} from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -13,10 +15,13 @@ export class AuthService {
     }
 
     register(userData: UserData) {
-        return this.http.post<any>(this._registerUrl, userData)
+        return this.http.post<any>(this._registerUrl, userData).pipe(catchError(this.errorHandler))
     }
 
     login(userData: UserData) {
-        return this.http.post<any>(this._loginUrl, userData)
+        return this.http.post<any>(this._loginUrl, userData).pipe(catchError(this.errorHandler))
+    }
+    errorHandler(error: HttpErrorResponse){
+        return throwError(error);
     }
 }

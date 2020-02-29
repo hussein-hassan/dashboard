@@ -3,11 +3,11 @@
         <div class="card-header">Register</div>
         <div class="card-body">
             <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm" novalidate>
-                <div *ngIf="hasError" class="alert alert-danger" role="alert">
+                <div *ngIf="true" class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Registration Failed !</h4>
                     <!--                    <p>{{this.formErrors}}</p>-->
-                    <p *ngFor="let error of formErrors" class="mb-0">
-                        * {{error}}
+                    <p *ngFor="let error of errorMsg" class="mb-0">
+                       * {{error}}
                     </p>
                     <hr>
                 </div>

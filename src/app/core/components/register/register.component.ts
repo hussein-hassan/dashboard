@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     }, {validator: PasswordValidator});
     private registerSubscription: Subscription;
     private hasError: boolean;
-
+    errorMsg = [];
     constructor(private _authService: AuthService, private _formBuilder: FormBuilder, private router: Router) {
     }
 
@@ -52,9 +52,7 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
 
             },
             error => {
-                console.log(error);
-                this.hasError = true;
-                this.formErrors = error.error.message;
+                this.errorMsg = error
             }
         )
     }
