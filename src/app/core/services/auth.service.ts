@@ -13,11 +13,11 @@ export class AuthService {
 
     constructor(private http: HttpClient) {
     }
-
+    //Register
     register(userData: UserData) {
         return this.http.post<any>(this._registerUrl, userData).pipe(catchError(this.errorHandler))
     }
-
+    // Login
     login(userData: UserData) {
         return this.http.post<any>(this._loginUrl, userData).pipe(catchError(this.errorHandler))
     }
