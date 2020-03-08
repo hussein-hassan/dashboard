@@ -8,9 +8,10 @@ import {NotFoundComponent} from "./core/components/not-found/not-found.component
 import {AccessDeniedComponent} from "./core/components/access-denied/access-denied.component";
 import {RegisterComponent} from './core/components/register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./core/services/auth.service";
 import {AuthGuard} from "./core/guards/auth.guard";
+import {TokenInterceptorService} from "./core/interceptors/token-interceptor.service";
 
 
 @NgModule({
@@ -33,7 +34,11 @@ import {AuthGuard} from "./core/guards/auth.guard";
 
 
     ],
-    providers: [AuthService, AuthGuard],
+    providers: [AuthService, AuthGuard, {
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptorService,
+        multi: true
+    }],
     bootstrap: [AppComponent]
 })
 export class AppModule {

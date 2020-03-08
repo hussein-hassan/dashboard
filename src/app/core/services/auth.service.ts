@@ -12,6 +12,7 @@ export class AuthService {
     private _loginUrl = 'http://localhost:3000/auth/login';
 
     constructor(private http: HttpClient) {
+        // console.log(this.getToken())
     }
     //Register
     register(userData: UserData) {
@@ -29,5 +30,9 @@ export class AuthService {
 
     loggedIn() {
         return !!localStorage.getItem('token');
+    }
+
+    getToken() {
+        return localStorage.getItem('token');
     }
 }

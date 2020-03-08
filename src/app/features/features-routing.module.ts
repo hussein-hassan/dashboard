@@ -13,37 +13,37 @@ import {DeleteOrderComponent} from "./orders/delete-order/delete-order.component
 import {AuthGuard} from "../core/guards/auth.guard";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {
-    path: '', component: FeaturesComponent, children: [
-      {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-      {
-        path: 'users', component: UsersComponent, children: [
-          {path: 'add-user', component: AddUserComponent},
-          {path: 'edit-user', component: EditUserComponent},
-          {path: 'delete-user', component: DeleteUserComponent},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {
+        path: '', component: FeaturesComponent, children: [
+            {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+            {
+                path: 'users', component: UsersComponent, canActivate: [AuthGuard], children: [
+                    {path: 'add-user', component: AddUserComponent, canActivate: [AuthGuard]},
+                    {path: 'edit-user', component: EditUserComponent, canActivate: [AuthGuard]},
+                    {path: 'delete-user', component: DeleteUserComponent, canActivate: [AuthGuard]},
+                ]
+            },
+            {
+                path: 'orders', component: OrdersComponent, canActivate: [AuthGuard], children: [
+                    {path: 'add-order', component: AddOrderComponent, canActivate: [AuthGuard]},
+                    {path: 'edit-order', component: EditOrderComponent, canActivate: [AuthGuard]},
+                    {path: 'delete-order', component: DeleteOrderComponent, canActivate: [AuthGuard]},
+                ]
+            },
         ]
-      },
-      {
-        path: 'orders', component: OrdersComponent, children: [
-          {path: 'add-order', component: AddOrderComponent},
-          {path: 'edit-order', component: EditOrderComponent},
-          {path: 'delete-order', component: DeleteOrderComponent},
-        ]
-      },
-    ]
-  },
+    },
 
 ];
 
 
 @NgModule({
-  declarations: [AddUserComponent, DeleteUserComponent, EditUserComponent,
-      AddOrderComponent, EditOrderComponent, DeleteOrderComponent],
-  imports: [
-    RouterModule,
-    [RouterModule.forChild(routes)]
-  ]
+    declarations: [AddUserComponent, DeleteUserComponent, EditUserComponent,
+        AddOrderComponent, EditOrderComponent, DeleteOrderComponent],
+    imports: [
+        RouterModule,
+        [RouterModule.forChild(routes)]
+    ]
 })
 export class FeaturesRoutingModule {
 }
