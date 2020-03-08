@@ -10,6 +10,7 @@ import {RegisterComponent} from './core/components/register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./core/services/auth.service";
+import {AuthGuard} from "./core/guards/auth.guard";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import {AuthService} from "./core/services/auth.service";
 
 
     ],
-    providers: [AuthService],
+    providers: [AuthService, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

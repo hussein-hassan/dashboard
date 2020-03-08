@@ -199,3 +199,5 @@ f
 6src/app/core/components/register/register.component.ts,b/c/bc1916316c476f1f16b88ec41029cce86f392f78
 Z
 *src/app/core/models/user-data.interface.ts,2/2/2228d320751fb3f74a11c983b2adf390567c5a37
+\
+,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c

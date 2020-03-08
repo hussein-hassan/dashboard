@@ -10,12 +10,13 @@ import {OrdersComponent} from "./orders/orders.component";
 import {AddOrderComponent} from "./orders/add-order/add-order.component";
 import {EditOrderComponent} from "./orders/edit-order/edit-order.component";
 import {DeleteOrderComponent} from "./orders/delete-order/delete-order.component";
+import {AuthGuard} from "../core/guards/auth.guard";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: '', component: FeaturesComponent, children: [
-      {path: 'home', component: HomeComponent},
+      {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
       {
         path: 'users', component: UsersComponent, children: [
           {path: 'add-user', component: AddUserComponent},

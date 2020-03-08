@@ -47,8 +47,8 @@ export class RegisterComponent implements OnInit, OnDestroy, UserData {
     onSubmit() {
         this.registerSubscription = this._authService.register(this.registrationForm.value).subscribe(
             response => {
-                console.log('success');
-                this.router.navigate(['/home'])
+                localStorage.setItem('token', response.access_token);
+                this.router.navigate(['/home']);
 
             },
             error => {

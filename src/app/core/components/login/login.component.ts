@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit, OnDestroy, UserData {
         username: this.username,
         password: this.password
     };
+
     constructor(private _authService: AuthService, private router: Router) {
     }
 
@@ -35,8 +36,8 @@ export class LoginComponent implements OnInit, OnDestroy, UserData {
 
         this.loginSubscription = this._authService.login(this.loginFormValues).subscribe(
             response => {
-                console.log(this.loginFormValues);
-                this.router.navigate(['/home'])
+                localStorage.setItem('token', response.access_token);
+                this.router.navigate(['/home']);
 
             },
             error => {

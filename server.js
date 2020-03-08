@@ -9,7 +9,7 @@ const orderdb = JSON.parse(fs.readFileSync('./orders.json', 'UTF-8'));
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
 server.use(jsonServer.defaults());
-const SECRET_KEY = '123456789';
+const SECRET_KEY = '672009';
 
 const expiresIn = '1h';
 
@@ -160,7 +160,7 @@ server.post('/auth/register', (req, res) => {
 
 // Create token for new user
     const access_token = createToken({email, password});
-    console.log("Access Token:" + access_token);
+    console.log("Token:" + access_token);
     const removeProperty = prop => ({[prop]: _, ...rest}) => rest;
     const removePassword = removeProperty('password');
     removePassword(req.body);
